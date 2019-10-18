@@ -1,0 +1,438 @@
+@import "mixin-flex.less";
+@import "mixin-basic.less";
+@import "colors.less";
+@import "fonts.less";
+
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.73;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #fff;
+  color: @moss;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  text-align: center;
+}
+.uk-container {
+  min-width: 270px;
+}
+.uk-sticky-placeholder {
+  .uk-totop {
+    position: fixed;
+    right: 15px;
+    bottom: 100px;
+    .border-radius(50%);
+    .size(40px,40px);
+    line-height: 40px;
+    background: @lightblue;
+    color: @moss;
+    display: none;
+    z-index: 2000;
+  }
+}
+.head-mobile {
+  nav {
+    .uk-navbar-toggle {
+      z-index: 100;
+    }
+  }
+}
+.head {
+  .uk-container {
+    padding: 0 5%;
+  }
+}
+.head,
+.head-mobile {
+  nav {
+    height: 75px;
+  }
+  .uk-navbar-nav>li>a {
+    font-size: 1.1rem;
+  }
+  .uk-navbar-container {
+    z-index: 99;
+  }
+  .uk-navbar-transparent {
+    .uk-navbar-toggle {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .languages {
+      margin-right: 0;
+    }
+    .languages,
+    .logo,
+    li > a {
+      font-family: "akrobatlight";
+      color: #ffffff;
+      &:focus, &:hover {
+        color: @lightcyan;
+      }
+    }
+  }
+  .uk-active {
+    .uk-navbar-toggle {
+      color: rgba(44, 89, 99, 0.5);
+    }
+    background: #ffffff;
+    box-shadow: 2px 15px 50px rgba(41,44,61,.1);
+    .languages,
+    .logo,
+    li > a {
+      font-family: "akrobatlight";
+      color: @middlegray;
+      &:focus, &:hover {
+        color: @darkgray;
+      }
+    }
+  }
+}
+.uk-offcanvas-bar {
+  background: @darkcyan;
+  .uk-nav-primary>li>a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+}
+.uk-button-primary {
+  background: @cyan;
+  color: #ffffff;
+}
+
+.uk-section-primary {
+  &:not(.uk-preserve-color) {
+    background: @lightblue;
+    .uk-button-primary {
+      background: @darkcyan;
+      color: @lightblue;
+    }
+  }
+}
+.uk-section-secondary {
+  &:not(.uk-preserve-color) {
+    background: @darkcyan;
+    .uk-button-secondary {
+      background: @cyan;
+      color: #ffffff;
+    }
+  }
+}
+
+.uk-section-muted {
+  &:not(.uk-preserve-color) {
+    background: @default;
+    .uk-button-default {
+      background: @middlegray;
+      color: @darkgray;
+    }
+  }
+}
+
+.uk-button-small {
+  .border-radius(5px);
+}
+.uk-button {
+  .border-radius(20px);
+}
+.uk-button-large {
+  .border-radius(30px);
+}
+
+.uk-label-success {
+  background-color: @cyan;
+}
+.uk-button-primary:focus,
+.uk-button-primary:hover {
+  background-color: @cyan;
+}
+.message {
+  padding: 6px 10px;
+  display: block;
+}
+
+header {
+  background: url('../img/bg_header.jpg') center bottom no-repeat;
+  background-size: auto 100%;
+  height: 480px;
+  position: relative;
+  &::after {
+    background: url('../img/bg_header-edge.png') center bottom no-repeat;
+    background-size: auto 80px;
+    position: absolute;
+    .size(100%,100%);
+    content: '';
+    bottom: 0;
+    left: 0;
+  }
+  .logo {
+    font-family: "akrobatlight";
+    font-size: 1em;
+    text-transform: uppercase;
+    span {
+      // color: #ffffff;
+      letter-spacing: 0.5em;
+      padding-left: 1em;
+    }
+  }
+  .slogan {
+    color: #ffffff;
+  }
+  h1 {
+    font-family: "akrobatthin";
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+  }
+  .uk-text-lead {
+    color: inherit;
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
+}
+section {
+  h2 {
+    font-family: "akrobatthin";
+  }
+  h3 {
+    font-family: "akrobatlight";
+  }
+}
+
+#intro {
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 0.25em;
+  }
+  .logo {
+    margin: 0 auto;
+    .opacity(0.5);
+    .size(140px,140px);
+    background: url('../img/logo_wireframe.svg') center center no-repeat;
+    background-size: 100% auto;
+    background-clip: content-box;
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+
+#about {
+  color: @darkcyan;
+  h3 {
+    font-family: "akrobatregular";
+    font-size: 2.0rem;
+    color: inherit;
+  }
+  p, ul {
+    font-size: 0.85rem;
+  }
+  .pic {
+    min-height: 360px;
+    background-size: auto 100%;
+  }
+  .text {
+    div {
+      padding: 20px 50px 50px;
+    }
+    .features {
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+  }
+  #first {
+    .pic {
+      background: url('../img/about_1.jpg') center center no-repeat;
+    }
+  }
+  #second {
+    .pic {
+      background: url('../img/about_2.jpg') center center no-repeat;
+    }
+  }
+  #third {
+    .pic {
+      background: url('../img/about_3.jpg') center bottom no-repeat;
+    }
+  }
+}
+
+#start {
+  h2 {
+    font-family: "akrobatlight";
+    span {
+      color: @cyan;
+    }
+  }
+}
+
+#technologies {
+  h2 {
+    font-family: "akrobatlight";
+    text-transform: uppercase;
+    color: @middlegray;
+    font-size: 3em;
+  }
+  p {
+    color: @moss;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .item {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    .size(120px,120px);
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      background-position: center top;
+    }
+    &.java {
+      background-image: url('../img/logo_tech_java.png');
+    }
+    &.node {
+      background-image: url('../img/logo_tech_node.png');
+    }
+    &.angular {
+      background-image: url('../img/logo_tech_angular.png');
+    }
+    &.html {
+      background-image: url('../img/logo_tech_html.png');
+    }
+    &.css {
+      background-image: url('../img/logo_tech_css.png');
+    }
+    &.js {
+      background-image: url('../img/logo_tech_js.png');
+    }
+    &.mongo {
+      background-image: url('../img/logo_tech_mongo.png');
+    }
+    &.git {
+      background-image: url('../img/logo_tech_git.png');
+    }
+    &.postgre {
+      background-image: url('../img/logo_tech_postgre.png');
+    }
+    &.docker {
+      background-image: url('../img/logo_tech_docker.png');
+    }
+  }
+}
+#jobs {
+  h2 {
+    font-family: "akrobatlight";
+    text-transform: uppercase;
+    color: @middlegray;
+    font-size: 3em;
+  }
+  .uk-card {
+    text-align: left;
+    font-size: 0.875em;
+    line-height: 1.45;
+  }
+  h3 {
+    font-family: "akrobatregular";
+    font-size: 2em;
+    margin-bottom: 0;
+    color: @cyan;
+  }
+  .uk-button {
+    background: @cyan;
+    color: #ffffff;
+  }
+  .uk-card-badge {
+    .size(50px,50px);
+    top: 40px;
+    right: 40px;
+    background: url('../img/icon_hot.png') 0 0 no-repeat;
+  }
+}
+#contacts {
+  background: @darkcyan url('../img/bg_contacts.png') center center no-repeat;
+  background-size: auto 100%;
+  .uk-card {
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    .uk-flex-bottom p {
+      margin-bottom: 0;
+    }
+  }
+}
+.uk-modal-dialog {
+  h2 {
+    font-family: "akrobatlight";
+    text-transform: uppercase;
+    color: @middlegray;
+  }
+  h3 {
+    font-family: "akrobatregular";
+    font-size: 1.25em;
+  }
+  .file-upload {
+    width: 100%;
+  }
+  .uk-button {
+    .border-radius(0);
+  }
+  .disclaimer {
+    font-size: 0.75em;
+    text-align: left;
+  }
+  .success {
+    background: #D8FFC0;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 0px 5px 0px;
+    border: none;
+    font-weight: bold;
+    color: #2E6800;
+    border-left: 3px solid #2E6800;
+  }
+  .error {
+    background: #FFE8E8;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 0px 5px 0px;
+    border: none;
+    font-weight: bold;
+    color: #FF0000;
+    border-left: 3px solid #FF0000;
+  }
+}
+#adress {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+footer {
+  .uk-subnav {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    * > :first-child {
+      font-size: 0.625rem;
+    }
+  }
+  .copyright {
+    font-size: 0.625rem;
+  }
+}
+textarea {
+  resize: none;
+}
+select {
+  &,& option {
+    font-weight: 300;
+  }
+}
+
+@import "media.less";

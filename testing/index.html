@@ -1,0 +1,167 @@
+<!doctype html>
+<html ng-app="testApp" ng-cloak>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.18/angular-material.min.css">
+	</head>
+
+	<body>
+		<md-content ng-controller="testAppController as $ctrl" layout="row" layout-padding layout-align="center center">
+    	<div layout="column" flex-gt-sm="50" ng-init="$ctrl.page = 1">
+				<div ng-if="$ctrl.page === 1">
+					<form name="form">
+						<fieldset>
+							<legend>Анонимный сбор статистики и ЗП в IT</legend>
+							<div class="form_description"></div>
+							<div layout-padding>
+								<div layout-gt-xs="row">
+				          <md-input-container class="md-block" flex>
+				            <label>Имя</label>
+				            <input ng-model="$ctrl.user.name" required>
+				          </md-input-container>
+								</div>
+								<div layout-gt-xs="row">
+				          <md-input-container class="md-block" flex>
+				            <label>Фамилия</label>
+				            <input ng-model="$ctrl.user.surname" required>
+				          </md-input-container>
+								</div>
+								<div layout="row" layout-align="center center">
+									<div flex="40">
+										<span style="color: rgba(0,0,0,0.38)">Floor</span>
+									</div>
+									<div layout="column" flex="60">
+					          <md-checkbox ng-model="$ctrl.user.gender[0]" aria-label="Male" ng-true-value="'Male'">
+					            Male
+					          </md-checkbox>
+										<md-checkbox ng-model="$ctrl.user.gender[1]" aria-label="Женский" ng-true-value="'Женский'">
+					            Женский
+					          </md-checkbox>
+									</div>
+								</div>
+								<div layout="row">
+									<md-input-container class="md-block" flex>
+										<label>Select a country</label>
+										<md-select ng-model="$ctrl.user.country">
+											<md-option ng-repeat="country in $ctrl.countries" value="{{country.abbrev}}">
+												{{country.name}}
+											</md-option>
+										</md-select>
+									</md-input-container>
+								</div>
+								<div layout="row">
+									<md-input-container class="md-block" flex>
+										<label>Job</label>
+										<md-select ng-model="$ctrl.user.job">
+											<md-option ng-repeat="job in $ctrl.jobs" value="{{job.abbrev}}">
+												{{job.name}}
+											</md-option>
+										</md-select>
+									</md-input-container>
+								</div>
+								<div layout-gt-xs="row">
+				          <md-input-container class="md-block" flex>
+				            <label>Salary per year</label>
+				            <input ng-model="$ctrl.user.salary" type="number">
+				          </md-input-container>
+								</div>
+								<div layout="row" layout-align="center center">
+									<div flex="35">
+										<span style="color: rgba(0,0,0,0.38)">Email</span>
+									</div>
+									<div layout="column" flex="65" style="display:inline-block;">
+					          <input ng-model="$ctrl.user.email[0]" type="text">@<input ng-model="$ctrl.user.email[1]" minlength="2" type="text">.com
+									</div>
+								</div>
+							</div>
+							<md-divider></md-divider>
+							<div layout-gt-xs="row" layout-align="end center">
+								<md-button class="md-raised md-warn" ng-click="$ctrl.apply(form.$valid);">Apply</md-button>
+								<md-button class="md-raised" style="color:rgb(49, 46, 46);background-color:green;" ng-click="$ctrl.clearForm()">
+									<md-tooltip md-direction="left">Clear all fields</md-tooltip>
+									X
+								</md-button>
+							</div>
+						</form>
+					</div>
+
+					<div ng-if="$ctrl.page === 2">
+						<div>
+							<fieldset>
+								<legend>Results</legend>
+								<p>
+									Your data: <br/> Sex - {{$ctrl.user.gender[0] || $ctrl.user.gender[1] || 'NaN'}},<br/>Country - {{$ctrl.user.country || 'NaN'}},
+									<br/> Job - {{$ctrl.user.job || 'NaN'}}, <br/> Salary - {{$ctrl.user.salary || 'NaN'}}.<br />
+									Thank you for your answer!<br />
+									Check your month salary using our calculator.
+								</p>
+							</fieldset>
+						</div>
+						<hr>
+						<div flex style="display:inline-block;">
+							<input ng-model="total" type="number"> / <input ng-model="months_number" type="text"> <md-button class="md-raised md-warn" ng-click="$ctrl.count(total, months_number)">=</md-button>
+						</div>
+						<div flex>
+							<md-input-container class="md-block">
+          			<label>Discussion</label>
+          			<textarea ng-model="discussion" md-maxlength="64" rows="2" max-rows="2" md-select-on-focus></textarea>
+        			</md-input-container>
+					  </div>
+						<div>
+							<md-button class="md-raised" style="color:rgb(49, 46, 46);background-color:green;" ng-click="$ctrl.addComment(discussion)">
+								Add a comment
+							</md-button>
+						</div>
+						<div ng-if="$ctrl.messages[$ctrl.messages.length - 1]" flex>
+							<md-card>
+								<md-card-title>
+									<md-card-title-text>
+										<span class="md-headline">Comment</span>
+            				<span class="md-subhead">{{$ctrl.messages[$ctrl.messages.length - 1]}}</span>
+          				</md-card-title-text>
+          				<md-card-title-media>
+            				<div class="md-media-lg card-media"></div>
+          				</md-card-title-media>
+        				</md-card-title>
+        				<md-card-actions layout="row" layout-align="end center">
+          				<md-button>Edit</md-button>
+          				<md-button>Delete</md-button>
+        				</md-card-actions>
+      				</md-card>
+						</div>
+						<div layout="column" layout-align="center center">
+							<button ng-click="$ctrl.showAllMessages = !$ctrl.showAllMessages; $ctrl.getMessages();">Show previous comments</button>
+						</div>
+						<div flex ng-if="$ctrl.showAllMessages === true">
+							<div ng-repeat="message in $ctrl.messages | orderBy:'-'" ng-if="!$first">
+								<md-card>
+									<md-card-title>
+										<md-card-title-text>
+											<span class="md-headline">Comment</span>
+	            				<span class="md-subhead">{{message}}</span>
+	          				</md-card-title-text>
+	          				<md-card-title-media>
+	            				<div class="md-media-lg card-media"></div>
+	          				</md-card-title-media>
+	        				</md-card-title>
+	        				<md-card-actions layout="row" layout-align="end center">
+	          				<md-button>Edit</md-button>
+	          				<md-button>Delete</md-button>
+	        				</md-card-actions>
+	      				</md-card>
+							</div>
+						</div>
+				</div>
+			</md-content>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js" type="text/javascript"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-animate.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-aria.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.18/angular-material.min.js" type="text/javascript"></script>
+		<script src="view.js" type="text/javascript"></script>
+	</body>
+</html>

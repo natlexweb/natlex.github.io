@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Natlex — веб-приложения для бизнеса</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description"
+    content="Natlex — это команда разработчиков веб-приложений для бизнеса. Мы работаем на Java, Angular и Agile. Присоединяйтесь!">
+  <meta name="keywords"
+    content="technology, java, angularjs, web, html5, css3, jquery, js, agile, frontend, backend, разработка, веб, веб-технологии, IT">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Natlex – веб-приложения для бизнеса">
+  <meta property="og:description"
+    content="Мы разрабатываем современные веб-приложения на радость людям. Наша философия – Java, Angular и Agile. Присоединяйтесь!">
+  <meta property="og:url" content="http://natlex.ru">
+  <meta property="og:site_name" content="Natlex">
+  <meta property="og:image" content="http://natlex.ru/icons/logo.png">
+  <link rel="icon" href="/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/icons/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <!--[if IE]>
+    <link rel="shortcut icon" href="favicon.ico">
+  <![endif]-->
+  <link rel="canonical" href="https://www.natlex.ru/">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/fakeLoader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=cyrillic,latin-ext');
+  </style>
+</head>
+
+<body>
+  <div id="fakeLoader"></div>
+  <header id="top" class="uk-section-media" uk-header>
+
+    <div class="head-mobile uk-hidden@m">
+      <div class="uk-navbar-container" uk-sticky="top: 750; animation: uk-animation-slide-top;" cls-active="uk-active"
+        cls-inactive="uk-navbar-transparent">
+        <nav class="uk-container uk-navbar-transparent" uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle" href="#menu-mobile" uk-navbar-toggle-icon uk-toggle></a>
+          </div>
+          <div class="logo uk-navbar-center">
+            <a href="#top" class="uk-link-reset" uk-scroll><img src="img/logo_fullcolor.png"
+                alt="Natlex.ru" /><span>natlex</span></a>
+          </div>
+          <div class="uk-navbar-right languages uk-hidden">
+            <form>
+              <div uk-form-custom="target: > * > span:first">
+                <select>
+                  <option value="ru">Ру</option>
+                  <option value="en">En</option>
+                </select>
+                <span>
+                  <span></span>
+                  <span uk-icon="icon: chevron-down"></span>
+                </span>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="head uk-visible@m">
+      <div class="uk-navbar-container" uk-sticky="top:750; animation: uk-animation-slide-top;" cls-active="uk-active"
+        cls-inactive="uk-navbar-transparent">
+        <div class="uk-container">
+          <nav class="uk-navbar" uk-navbar>
+            <div class="logo uk-navbar-left">
+              <a href="#" class="uk-link-reset" uk-scroll><img src="img/logo_fullcolor.png"
+                  alt="Natlex.ru" /><span>natlex</span></a>
+            </div>
+            <ul class="uk-navbar-nav uk-navbar-center">
+              <li><a href="#intro" uk-scroll>Компания</a></li>
+              <li><a href="#technologies" uk-scroll>Технологии</a></li>
+              <li><a href="#jobs" uk-scroll>Вакансии</a></li>
+              <li><a href="#internship" uk-scroll>Стажировка</a></li>
+              <li><a href="#contacts" uk-scroll>Контакты</a></li>
+            </ul>
+            <div class="uk-navbar-right languages uk-hidden">
+              <form>
+                <div uk-form-custom="target: > * > span:first">
+                  <select>
+                    <option value="ru">Ру</option>
+                    <option value="en">En</option>
+                  </select>
+                  <span>
+                    <span></span>
+                    <span uk-icon="icon: chevron-down"></span>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slogan uk-container uk-position-center">
+      <h1 uk-scrollspy="cls: uk-animation-slide-top; delay: 500" class="uk-heading-primary">
+        Создавай.<br>развивайся.<br>открывай
+        новое!</h1>
+      <p class="uk-text-lead" uk-scrollspy="cls:uk-animation-slide-bottom; delay: 700">присоединяйся к команде
+        IT-разработчиков NatLex</p>
+    </div>
+
+  </header>
+
+  <!-- INTRO START -->
+  <section id="intro" class="uk-section-default uk-section-large">
+    <div class="uk-container">
+      <div class="uk-margin-large">
+        <h2 uk-scrollspy="cls:uk-animation-slide-top">Natlex</h2>
+        <div class="logo"></div>
+        <p uk-scrollspy="cls:uk-animation-slide-bottom">NatLex — это IT-компания из города Петрозаводска. Мы
+          разрабатываем высоконагруженные веб-приложения для бизнеса. Наша команда работает над международными
+          проектами и говорит на нескольких языках.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY START -->
+  <section id="about" class="uk-section-primary">
+    <div class="container uk-grid uk-child-width-1-1 uk-grid-stack" uk-grid>
+
+      <!-- first feature -->
+      <div id="first" class="uk-child-width-1-2@m uk-grid uk-child-width-expand@s uk-grid-stack uk-grid-collapse"
+        uk-grid>
+        <div class="uk-width-expand@m pic" uk-scrollspy="cls:uk-animation-fade"></div>
+        <div class="uk-width-expand@m text uk-flex uk-flex-middle uk-flex-center uk-child-width-1-1">
+          <div uk-scrollspy="cls:uk-animation-slide-top-small">
+            <h3>Ценим время и следуем планам</h3>
+            <p>Работаем над проектами по методологии Scrum. Все задачи разбиваются на спринты длительностью 10-14 дней.
+              После каждого спринта мы анализируем результаты и разбираем ошибки, чтобы следующий спринт стал лучше.
+              Ежедневно проводим десятиминутные митинги для синхронизации работы внутри команды.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- second feature -->
+      <div id="second" class="uk-child-width-1-2@m uk-grid uk-child-width-expand@s uk-grid-stack uk-grid-collapse"
+        uk-grid>
+        <div class="uk-width-expand@m pic" uk-scrollspy="cls:uk-animation-fade"></div>
+        <div class="uk-width-expand@m text uk-flex uk-flex-middle uk-flex-center uk-child-width-1-1">
+          <div uk-scrollspy="cls:uk-animation-slide-top-small">
+            <h3>Бережем отношения с людьми</h3>
+            <p>Самое ценное в NatLex это люди. Мы стараемся быть компанией, которая уважает и поддерживает каждого
+              сотрудника. Мы ведем открытый диалог с сотрудниками и ценим мнение каждого члена команды. Мы верим, что
+              профессиональный рост наших сотрудников это рост всей компании вцелом.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- third feature -->
+      <div id="third" class="uk-child-width-1-2@m uk-grid uk-child-width-expand@s uk-grid-stack uk-grid-collapse"
+        uk-grid>
+        <div class="uk-width-expand@m pic" uk-scrollspy="cls:uk-animation-fade"></div>
+        <div class="uk-width-expand@m text uk-flex uk-flex-middle uk-flex-center uk-child-width-1-1">
+          <div uk-scrollspy="cls:uk-animation-slide-top-small">
+            <h3>Поощряем сотрудников</h3>
+            <p>Мы заботимся о членах нашего коллектива и предоставляем:</p>
+            <ul class="features uk-text-left">
+              <li>курсы английского языка;</li>
+              <li>гибкий график работы в комфортном офисе;</li>
+              <li>проведение совместных мероприятий;</li>
+              <li>печеньки и кофе;</li>
+              <li>персональный подход для поощрений и мотивации.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOIN START -->
+  <section id="start" class="uk-section-secondary uk-section-small">
+    <div class="uk-container">
+      <h2 uk-scrollspy="cls: uk-animation-slide-fade; delay: 200">Хотите работать с
+        нами?<br><span>Присоединяйтесь!</span></h2>
+      <a class="uk-button uk-button-secondary uk-button-large" href="#modal-jobs" uk-toggle
+        uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500">Отправить
+        резюме</a>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES START -->
+  <section id="technologies" class="uk-section-muted uk-section-large">
+    <div class="uk-container">
+      <h2>Технологии</h2>
+      <div class="uk-margin-bottom">
+        <p>В работе мы стараемся использовать самые актуальные инструменты
+          и применяем прогрессивные технологии:</p>
+      </div>
+
+      <div class="uk-child-width-auto uk-child-width-1-5@m uk-flex-center limiter" uk-grid
+        uk-scrollspy="cls: uk-animation-fade; target: > div > .item; delay: 200; repeat: true">
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item java"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item node"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item angular"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item html"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item css"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item js"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item mongo"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item git"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item postgre"></div>
+        </div>
+        <div>
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium;" class="item docker"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VACANCIES START -->
+  <section id="jobs" class="uk-section-default uk-section-large">
+    <div class="uk-container">
+      <h2>Вакансии</h2>
+      <div class="uk-child-width-1-2@m uk-grid-match uk-grid" uk-grid>
+        <div class="uk-first-column">
+          <!-- <div class="uk-card uk-card-default">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Frontend разработчик</h3>
+              <div class="uk-text-meta">Полный день</div>
+              <table class="uk-table uk-table-small uk-table-justify uk-table-divider">
+                <thead>
+                  <tr>
+                    <th width="25%">&nbsp;</th>
+                    <th width="75%">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Технологии</td>
+                    <td>AngularJS, Angular</td>
+                  </tr>
+                  <tr>
+                    <td width="25%">Опыт работы</td>
+                    <td width="75%">от 1 года</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Пожелания к кандидату</h4>
+              <p><span uk-icon="icon: check"></span> Опыт разработки с использованием AngularJS, Angular и server-side
+                Node.js;</p>
+              <p><span uk-icon="icon: check"></span> Хорошее понимание технологий: CSS3, LESS, HTML5, Jquery, Webpack;</p>
+              <p><span uk-icon="icon: check"></span> Знание и понимание основ OOP;</p>
+
+              <h4>Будет плюсом</h4>
+              <p><span uk-icon="icon: check"></span> Опыт работы с системами контроля версий (git) и системами сборки
+                (Gradle/Gulp/npm);</p>
+              <p><span uk-icon="icon: check"></span> Опыт тестирования JavaScript (unit, TDD, BDD);</p>
+              <p><span uk-icon="icon: check"></span> Знание английского на уровне чтения технической документации.</p>
+              <hr />
+              <p class="uk-margin">
+                <a class="uk-button uk-first-column job-type-frontend" href="#modal-jobs" uk-toggle>Отправить резюме</a>
+              </p>
+            </div>
+          </div> -->
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Менеджер IT-проектов</h3>
+              <div class="uk-text-meta">Полный день</div>
+              <table class="uk-table uk-table-small uk-table-justify uk-table-divider">
+                <thead>
+                  <tr>
+                    <th width="25%">&nbsp;</th>
+                    <th width="75%">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="25%">О должности</td>
+                    <td width="75%">
+                      <p>Нам нужен опытный менеджер, который будет сотрудничать с командой разработчиков. Человек,
+                        ориентированный на создание продукта высокого качества и общение с заказчиками по поводу хода
+                        выполнения проектов.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="25%">Опыт работы</td>
+                    <td width="75%">от 1 года</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Пожелания к кандидату</h4>
+              <p><span uk-icon="icon: check"></span> Знание гибких методологий разработки;</p>
+              <p><span uk-icon="icon: check"></span> Понимание технических аспектов разработки веб-приложений;</p>
+              <p><span uk-icon="icon: check"></span> Опыт в построении самоорганизующихся команд;</p>
+              <p><span uk-icon="icon: check"></span> Навыки общения с заказчиками и с командой разработчиков;</p>
+              <p><span uk-icon="icon: check"></span> Навыки стратегического мышления и долгосрочного планирования;</p>
+              <p><span uk-icon="icon: check"></span> Отличные письменные и устные навыки общения на английском языке
+                (upper-intermediate);</p>
+              <p><span uk-icon="icon: check"></span> Организационные навыки, включая внимание к деталям и
+                многозадачность;</p>
+              <p><span uk-icon="icon: check"></span> Умение быстро схватывать технические аспекты реализации проектов,
+                развитая логика;</p>
+              <p><span uk-icon="icon: check"></span> Умение делегировать задачи;</p>
+              <p><span uk-icon="icon: check"></span> Любознательность.</p>
+
+              <h4>Будет плюсом</h4>
+              <p><span uk-icon="icon: check"></span> Опыт в разработке веб-приложений;</p>
+              <p><span uk-icon="icon: check"></span> Лидерские навыки, опыт управления командой от 5 человек;</p>
+              <p><span uk-icon="icon: check"></span> Знание немецкого языка.</p>
+
+              <hr />
+              <p class="uk-margin">
+                <a class="uk-button uk-first-column job-type-pm" href="#modal-jobs" uk-toggle>Отправить резюме</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">QA инженер</h3>
+              <div class="uk-text-meta">Полный день</div>
+              <table class="uk-table uk-table-small uk-table-justify uk-table-divider">
+                <thead>
+                  <tr>
+                    <th width="25%">&nbsp;</th>
+                    <th width="75%">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>О должности</td>
+                    <td>Требуется специалист по тестированию веб-служб REST и базовых протоколов (HTTP/S, TCP/IP) в
+                      многоуровневых тестовых инфраструктурах, анализу тестовой документации и ее поддержки в актуальном
+                      состоянии. Проведение ручного тестирования (регрессионного, функционального, интеграционного),
+                      документирование ошибок и контроль их исправления.</td>
+                  </tr>
+                  <tr>
+                    <td width="25%">Опыт работы</td>
+                    <td width="75%">от 1 года</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4>Пожелания к кандидату</h4>
+              <p><span uk-icon="icon: check"></span> Опыт тестирования клиент-серверных приложений;</p>
+              <p><span uk-icon="icon: check"></span> Опыт написания и ведения тестовой документации;</p>
+              <p><span uk-icon="icon: check"></span> Знание и умение применять на практике техники тест-дизайна;</p>
+              <p><span uk-icon="icon: check"></span> Опыт работы с баг-трекинговыми и тест-трекинговыми системами;</p>
+              <p><span uk-icon="icon: check"></span> Опыт работы с Git системами;</p>
+              <p><span uk-icon="icon: check"></span> Уверенное владение DevTools (Console);</p>
+              <p><span uk-icon="icon: check"></span> Опыт работы с REST API;</p>
+              <p><span uk-icon="icon: check"></span> Базовые знания SQL, HTML, CSS и JavaScript;</p>
+              <p><span uk-icon="icon: check"></span> Знание английского языка на уровне чтения и написания технической
+                документации;</p>
+              <p><span uk-icon="icon: check"></span> Умение грамотно формулировать свои мысли, повышенное чувство
+                ответственности, умение работать в команде.</p>
+
+              <h4>Будет плюсом</h4>
+              <p><span uk-icon="icon: check"></span> Опыт тестирования мобильных приложений;</p>
+              <p><span uk-icon="icon: check"></span> Понимание ООП и паттернов разработки тестов;</p>
+              <p><span uk-icon="icon: check"></span> Опыт в автоматизации тестирования (GUI, нагрузочное);</p>
+              <p><span uk-icon="icon: check"></span> Навыки Ad hoc тестирования;</p>
+              <p><span uk-icon="icon: check"></span> Опыт работы с Linux;</p>
+              <p><span uk-icon="icon: check"></span> Использование системы оперирования (Docker, Jenkins/TeamCity, etc).
+              </p>
+              <hr />
+              <p class="uk-margin">
+                <a class="uk-button uk-first-column job-type-tester" href="#modal-jobs" uk-toggle>Отправить резюме</a>
+              </p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <!-- second row-->
+        <div>
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">DevOps</h3>
+              <div class="uk-text-meta">Полный день</div>
+              <table class="uk-table uk-table-small uk-table-justify uk-table-divider">
+                <thead>
+                  <tr>
+                    <th width="25%">&nbsp;</th>
+                    <th width="75%">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Технологии</td>
+                    <td>Gitlab CI/CD, Teamcity, Terraform, Kubernetes, Helm, Docker</td>
+                  </tr>
+                  <tr>
+                    <td width="25%">Опыт работы</td>
+                    <td width="75%">от 1 года</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Пожелания к кандидату</h4>
+              <p><span uk-icon="icon: check"></span> Знание основ Unix, опыт администрирования Linux;</p>
+              <p><span uk-icon="icon: check"></span> Знание базовых принципов работы TCP/IP;</p>
+              <p><span uk-icon="icon: check"></span> Навыки написания скриптов (bash, Ruby, Python);</p>
+              <p><span uk-icon="icon: check"></span> Знание английского на уровне чтения технической документации.</p>
+
+              <h4>Будет плюсом</h4>
+              <p><span uk-icon="icon: check"></span> Коммуникативные навыки;</p>
+              <p><span uk-icon="icon: check"></span> Умение оперативно находить / устранять проблемы и уязвимости;</p>
+
+              <hr />
+              <p class="uk-margin">
+                <a class="uk-button uk-first-column job-type-devops" href="#modal-jobs" uk-toggle>Отправить резюме</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Backend разработчик</h3>
+              <div class="uk-text-meta">Полный день</div>
+              <table class="uk-table uk-table-small uk-table-justify uk-table-divider">
+                <thead>
+                  <tr>
+                    <th width="25%">&nbsp;</th>
+                    <th width="75%">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Технологии</td>
+                    <td>J2SE, Spring, Hibernate, JPA, MySQL/MongoDB</td>
+                  </tr>
+                  <tr>
+                    <td>Опыт работы</td>
+                    <td>OOP, OOD, design patterns</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Пожелания к кандидату</h4>
+              <p>Понимание сервис-ориентированной архитектуры, разработка многопоточных и распределенных приложений.
+                Высокий уровень самоорганизованности и личной ответственности. Инициативность, умение работать в
+                команде.</p>
+
+              <h4>Будет плюсом</h4>
+              <p><span uk-icon="icon: check"></span> Понимание и опыт применения Unit-тестирования;</p>
+              <p><span uk-icon="icon: check"></span> Понимание основ сетевых протоколов;</p>
+              <p><span uk-icon="icon: check"></span> Опыт работы с системами контроля версий (git) и системами сборки
+                (Gradle/maven/ant);</p>
+              <p><span uk-icon="icon: check"></span> Знание английского на уровне чтения технической документации.</p>
+              <hr>
+              <p class="uk-margin">
+                <a class="uk-button uk-first-column job-type-backend" href="#modal-jobs" uk-toggle="">Отправить
+                  резюме</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINEE START -->
+  <section id="internship" class="uk-section-muted uk-section-large">
+    <div class="uk-container">
+      <h2 uk-scrollspy="cls: uk-animation-slide-fade; delay: 200">Стажировка</span>
+      </h2>
+      <div class="uk-margin-bottom">
+        <p>Прежде всего, команда Натлекс &mdash; это люди, готовые помочь. Если ты студент, или просто хочешь
+          попробовать себя в деле &mdash; мы будем рады поддержать инициативу и поможем сделать первый шаг в освоении
+          профессии.</p>
+        <p>От тебя нужна лишь заявка!</p>
+      </div>
+      <a class="uk-button uk-button-primary uk-button-large" href="#modal-for-trainee" uk-toggle
+        uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500">Отправить заявку</a>
+    </div>
+  </section>
+
+  <!-- CONTACTS START -->
+  <section id="contacts" class="contactus uk-section-secondary uk-section-small">
+    <div class="uk-container">
+      <div class="uk-grid-large uk-text-left uk-child-width-1-2@s uk-grid" uk-grid>
+        <div uk-scrollspy="cls: uk-animation-slide-top; delay: 200">
+          <form id="feedback" class="feedback" method="post" action="">
+            <fieldset class="uk-fieldset">
+              <legend class="uk-legend">
+                <h2>Контакты</h2>
+              </legend>
+
+              <div class="uk-margin">
+                <input class="uk-input" type="text" name="name" placeholder="Имя *" data-required="true">
+              </div>
+
+              <div class="uk-margin">
+                <input class="uk-input" type="email" name="email" placeholder="Почта *" data-required="true">
+              </div>
+
+              <div class="uk-margin">
+                <textarea class="uk-textarea" rows="5" name="message" placeholder="Сообщение *"
+                  data-required="true"></textarea>
+              </div>
+            </fieldset>
+
+            <div class="uk-text-center" uk-grid>
+              <div>
+                <button class="uk-button uk-button-default" type="submit">Отправить</button>
+              </div>
+              <div class="uk-width-expand@m">
+                <div id="feedback_error" class="feedback-error message uk-label-warning uk-hidden uk-animation-fade">
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+          <div id="feedback_results"
+            class="feedback-results uk-position-center uk-text-center uk-hidden uk-animation-fade" uk-alert>
+            <button class="uk-alert-close" type="button" uk-close></button>
+            <div class="success-message"></div>
+          </div>
+
+        </div>
+        <div id="adress" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500">
+          <div class="uk-card uk-card-body">
+            <p>Россия<br />
+              185035, Карелия, Петрозаводск<br />
+              ул. Кирова, 8Б (4 этаж)</p>
+            <legend class="uk-legend uk-visible@s">
+              <h2>&nbsp;</h2>
+            </legend>
+            <div class="uk-flex uk-flex-bottom uk-flex-wrap">
+              <p class="uk-text-lead uk-flex-1 uk-margin-right"><a href="mailto:info@natlex.ru">info@natlex.ru</a></p>
+              <p class="uk-text-small uk-margin-remove"><a href="tel:79212282017">+7 (921) 228-20-17</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="uk-section uk-section-small">
+    <div class="uk-container">
+      <div class="uk-margin">
+        <img src="img/logo_gray.png" />
+      </div>
+      <nav class="uk-navbar" uk-navbar>
+        <ul class="uk-subnav uk-navbar-center">
+          <li><a href="#intro" uk-scroll>Компания</a></li>
+          <li><a href="#technologies" uk-scroll>Технологии</a></li>
+          <li><a href="#jobs" uk-scroll>Вакансии</a></li>
+          <li><a href="#contacts" uk-scroll>Контакты</a></li>
+        </ul>
+      </nav>
+      <hr />
+      <div class="copyright">Natlex &copy; 2016 &mdash; 2019</div>
+      <a uk-totop uk-scroll href="#top"></a>
+    </div>
+  </footer>
+
+  <!-- modals-->
+  <div id="modal-jobs" uk-modal="center: true">
+    <div id="job-apply" class="uk-modal-dialog">
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+      <form class="contactus-form" method="post" action="">
+
+        <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Расскажите нам о себе</h2>
+        </div>
+
+        <div class="uk-modal-body">
+          <div class="uk-grid-small uk-text-left" uk-grid>
+
+            <div class="uk-width-1-1@s">
+              <h3 class="uk-heading-bullet uk-margin-remove">Выберите должность *</h3>
+              <select id="jobtype" name="jobtype" class="uk-select uk-margin-remove" required>
+                <option selected="selected" value="Not-selected">- Не выбрано -</option>
+                <option value="Project-manager">Менеджер проектов</option>
+                <option value="QA-engineer">QA инженер</option>
+                <option value="Devops-engineer">DevOps инженер</option>
+                <option value="Backend-developer">Backend разработчик</option>
+              </select>
+            </div>
+
+            <div class="uk-width-1-1@s">
+              <h3 class="uk-heading-bullet uk-margin-top">Прикрепите резюме</h3>
+            </div>
+
+            <div class="uk-width-1-1@s uk-margin-remove">
+              <div class="file-upload" uk-form-custom="target: true">
+                <input type="file" name="file_attach[]">
+                <input class="uk-input" type="text" placeholder="Выберите файл" disabled name="file">
+              </div>
+            </div>
+
+            <div class="uk-width-1-1@s">
+              <h3 class="uk-heading-bullet uk-margin-top">Оставьте контактные данные</h3>
+            </div>
+
+            <div class="uk-width-1-2@s uk-margin-remove">
+              <input class="uk-input" type="text" name="name" placeholder="Имя *" data-required="true">
+            </div>
+
+            <div class="uk-width-1-2@s uk-margin-remove">
+              <input class="uk-input" type="text" name="phone" data-required="true" placeholder="Телефон *">
+            </div>
+            <div class="uk-width-1-1@s">
+              <textarea class="uk-textarea" rows="2" name="message" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+
+          <p class="disclaimer">* &mdash; поля, обязательные для заполнения.</p>
+          <div id="contact_error" class="contactus-error message uk-label uk-label-warning uk-hidden"></div>
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+          <button class="uk-button uk-button-text uk-modal-close uk-margin-right" type="reset">Отмена</button>
+          <button class="uk-button uk-button-primary" id="sendme" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div id="contact_results" class="contactus-results uk-text-center uk-hidden  uk-animation-fade"></div>
+
+    </div>
+  </div>
+
+  <div id="modal-for-trainee" uk-modal="center: true">
+    <div id="trainee-apply" class="uk-modal-dialog">
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+      <form class="contactus feedback" method="post" action="">
+
+        <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Отправьте заявку на стажировку</h2>
+        </div>
+
+        <div class="uk-modal-body">
+          <div class="uk-grid-small uk-text-left" uk-grid>
+
+            <div class="uk-width-1-2@s">
+              <input class="uk-input" type="text" name="name" placeholder="Имя *" data-required="true">
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <input class="uk-input" type="email" name="email" data-required="true" placeholder="Электронная почта *">
+            </div>
+            <div class="uk-width-1-1@s">
+              <textarea class="uk-textarea" rows="2" name="message" placeholder="Расскажите кратко о себе"></textarea>
+            </div>
+          </div>
+
+          <p class="disclaimer">* &mdash; поля, обязательные для заполнения.</p>
+          <div id="trainee_error" class="feedback-error message uk-label uk-label-warning uk-hidden"></div>
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+          <button class="uk-button uk-button-text uk-modal-close uk-margin-right" type="reset">Отмена</button>
+          <button class="uk-button uk-button-primary" id="trainee-sendme" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div id="trainee_results" class="feedback-results uk-text-center uk-hidden success-message uk-animation-fade">
+      </div>
+
+    </div>
+  </div>
+
+  <div id="menu-mobile" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-text-center uk-flex" uk-height-viewport>
+      <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+      <div class="uk-margin-auto-vertical uk-width-1-1">
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+          <li><a href="http://natlex.ru/#intro" class="cl" uk-scroll>Компания</a></li>
+          <li><a href="http://natlex.ru/#technologies" class="cl" uk-scroll>Технологии</a></li>
+          <li><a href="http://natlex.ru/#jobs" class="cl" uk-scroll>Вакансии</a></li>
+          <li><a href="http://natlex.ru/#internship" class="cl" uk-scroll>Стажировка</a></li>
+          <li><a href="http://natlex.ru/#contacts" class="cl" uk-scroll>Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/vendor/fakeLoader.min.js"></script>
+  <script type="text/javascript">
+    jQuery('#menu-mobile .cl').on('click', function () {
+      jQuery('html').removeClass('uk-modal-page');
+      jQuery('body').removeAttr("style");
+      jQuery('#menu-mobile').removeClass('uk-open');
+      jQuery('#menu-mobile').hide();
+    });
+    $("#fakeLoader").fakeLoader({
+      spinner: "spinner6",
+      bgColor: "#2c5963"
+    });
+  </script>
+  <script src="js/form.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/vendor/uikit.min.js"></script>
+  <script src="js/vendor/uikit-icons.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter44964781 = new Ya.Metrika({
+            id: 44964781,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true
+          });
+        } catch (e) {}
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/44964781" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

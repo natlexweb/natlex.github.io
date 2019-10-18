@@ -1,0 +1,60 @@
+@media (min-width: 640px) {
+  header {
+    height: 800px;
+    background-size: auto 100%;
+    &::after {
+      background-size: 100% auto;
+      background-size: auto 121px;
+    }
+    .logo {
+      span {
+        font-size: 1.2em;
+      }
+    }
+  }
+  #about {
+    .features {
+      width: 360px;
+    }
+  }
+  #contacts {
+    background-size: auto auto;
+  }
+}
+@media (min-width: 960px) {
+  #about {
+    text-align: left;
+    #second {
+      .flex-direction(row-reverse);
+    }
+    .text {
+      .features {
+        margin-left: 0;
+      }
+    }
+  }
+}
+@media (min-width: 1921px) {
+  header {
+    background-size: 100% auto;
+    &::after {
+      background-size: 100% auto;
+    }
+  }
+  #about {
+    .container {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   /* IE10+ specific styles go here */
+   /* IE Fix for centering modal */
+    .uk-open.uk-modal {
+      overflow-x: hidden;
+    }
+    .uk-modal-dialog {
+        margin: 0px;
+    }
+}
