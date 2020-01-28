@@ -23,6 +23,9 @@ $(function() {
     $('.job-type-devops').click(function () {
         $("#jobtype").val('Devops-engineer');
     });
+    $('.job-type-frontend').click(function () {
+        $("#jobtype").val('Frontend-developer');
+    });
     $('.job-type-backend').click(function () {
         $("#jobtype").val('Backend-developer');
     });
